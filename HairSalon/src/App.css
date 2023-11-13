@@ -1,5 +1,56 @@
+div#root {
+  background-color: #000410;
+  height: auto;
+}
+
+a.nav-link {
+  color: #fff;
+}
+
+a.navbar-brand {
+  color: #fff;
+}
+
 /*Start Navigation*/
 
+nav{
+  background: rgb(18,45,126);
+  background: linear-gradient(90deg, rgba(18,45,126,1) 0%, rgba(3,20,73,1) 100%);
+  height: 100px;
+}
+
+.navigation {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navigation.visible {
+  transform: translateY(0);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+li {
+  margin: 0 10px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
 
 
 /*Start Header Video*/
@@ -9,9 +60,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Set the container to cover the viewport height */
   overflow: hidden; /* Hide overflow content */
   background-color: #000410;
+  padding: 0;
 }
 
 .video-container {
@@ -32,10 +83,10 @@ video {
 .businessName,.businessName2{
   position: relative;
   bottom: 7em;
+  font-size: 5em;
   text-align: center;
   color: #fff;
   text-shadow: 5px 4px 9px #000;
-  font-size: 5em;
 }
 
 /*End Header Video*/
@@ -46,4 +97,13 @@ z-index: 1;
 position: absolute;
 margin: 0 auto;
 left: 35%;
+animation-duration: 4s
 }
+
+/* Start Animations */
+.sectionDescription{
+  font-size: 1.5em;
+  color: #fff;
+}
+
+/* Start Animations */
