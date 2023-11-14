@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
+import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 
 function Navigation() {
   const [showNavigation, setShowNavigation] = useState(false);
@@ -12,59 +13,35 @@ function Navigation() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-//
-
+  //
 
   return (
-    <nav className={`navbar navbar-expand-lg ${showNavigation ? 'visible' : ''}`}>
-      <div className="container">
-        <a className="navbar-brand" href="#">
-          BarberShop HairCut Studio
-        </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav mx-auto">
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Home
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                About Us
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Book An Appointment
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Contact Us
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <Navbar
+      expand="lg"
+      className={`navbar navbar-expand-lg ${showNavigation ? "visible" : ""}`}
+    >
+      <Container>
+        <Navbar.Brand href="#home">BarberShop HairCut Studio</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link className="nav-link" href="#home">
+              Home
+            </Nav.Link>
+            <Nav.Link href="#link">About Us</Nav.Link>
+            <Nav.Link href="#link">Book An Appointment</Nav.Link>
+            <Nav.Link href="#link">Contact Us</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
 

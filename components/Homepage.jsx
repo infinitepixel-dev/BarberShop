@@ -1,44 +1,55 @@
-import React from 'react'
-import Navigation from './Navigation';
-import bgVideo from '../src/assets/bgVideo.mp4';
-import Poster from './Poster';
-import 'animate.css/animate.min.css';
-import { useEffect } from 'react';
-import LocationFinder from './LocationFinder';
+import React from "react";
+import Navigation from "./Navigation";
+import bgVideo from "../src/assets/bgVideo.mp4";
+import Poster from "./Poster";
+
+import "./Homepage.css";
+import "animate.css/animate.min.css";
+
+import { useEffect } from "react";
+// import LocationFinder from './LocationFinder';
+import { Container, Row, Col } from "react-bootstrap";
 
 function Homepage() {
-    useEffect(() => {
-        const siteLogo = document.querySelector('.siteLogo');
-        if (siteLogo) {
-          siteLogo.classList.add('animate__fadeInDown');
-        }
-      }, []);  
- 
+  useEffect(() => {
+    const siteLogo = document.querySelector(".siteLogo");
+    if (siteLogo) {
+      siteLogo.classList.add("animate__fadeInDown");
+    }
+  }, []);
+
   return (
-  <>
-    <Navigation />
-    <div className='container-fluid'>
-      <div className='Row'>
-        <div className='Col'>
-          <div className='video-container'>
-            <video autoPlay loop muted src={bgVideo} type='video/mp4'>
-              Your browser does not support the video tag.
-            </video>
-            <div className="Col text-center">
+    <Container id="homepageContainer" fluid>
+      <Navigation />
+      <div className="video-container">
+        <video autoPlay loop muted src={bgVideo} type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+        <Row className="justify-content-center" id="logoRow">
+          <Col>
+            <div className="logo-container">
               <img
-                src='./public/logo.png'
-                alt='Barber Shop Hair Salon Studio'
-                className='siteLogo animate__animated'
+                src="./public/logo.png"
+                alt="Barber Shop Hair Salon Studio"
+                className="siteLogo animate__animated"
               />
             </div>
-          </div>
-        </div>
+          </Col>
+        </Row>
       </div>
-    </div>
-    <Poster />
-    <LocationFinder />
-  </>
-  )
+
+      <Row>
+        <Col>
+          <Poster />
+        </Col>
+      </Row>
+
+      <Row>
+        <Col>{/* <LocationFinder /> */} Location Finder Here</Col>
+      </Row>
+    </Container>
+  );
 }
 
-export default Homepage
+export default Homepage;

@@ -1,23 +1,19 @@
-import React from 'react'
+import React from "react";
+import { Row, Col } from "react-bootstrap";
 
 function Poster() {
-    const poster = './public/poster.png'
+  const poster = "./public/poster.png";
   return (
-  <div>
-    <div className="row">
-        <div className="col pricingDescription">
-            <p className='sectionDescription p-5 mt-5'>
-            We believe in providing top-notch grooming services at affordable prices. Our pricing is designed to cater to every customer's needs while maintaining the highest quality standards. Whether you're looking for a classic haircut, a beard trim, or a complete grooming package, you'll find our rates competitive and our services exceptional. Check out our pricing below:
-            </p>
-        </div>
-        <div className="row">
-            <div className="col mt-5 text-center">
-                <img src={poster} alt="Shop Hours"/>
-            </div>
-        </div>
-    </div>
-  </div>
-  )
+    <Row>
+      <Col className="pricingDescription text-center p-5 mt-5">
+        {/* Text content */}
+      </Col>
+
+      <Col className="text-center mt-5">
+        <img src={poster} alt="Shop Hours" />
+      </Col>
+    </Row>
+  );
 }
 
-export default Poster
+export default Poster;
