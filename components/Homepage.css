@@ -17,7 +17,7 @@ video {
   z-index: -1;
 }
 
-/* Responsive Design */
+/* Media Queries */
 @media screen and (max-width: 800px) {
   #homepageContainer {
     min-height: 100vh;
@@ -30,4 +30,10 @@ video {
   video {
     object-fit: cover;
   }
+
+  @media screen and (max-width: 390px) {
+    .siteLogo {
+      top: 8em;
+  }
+}
 }

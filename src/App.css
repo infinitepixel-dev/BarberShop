@@ -16,6 +16,7 @@ a.navbar-brand {
 nav {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   z-index: 1000;
   background-color: #174075;
@@ -61,15 +62,9 @@ nav {
   opacity: 1;
 }
 
-/* 
-.navigation.visible {
-  transform: translateY(0);
-} */
-
 ul {
   list-style: none;
   padding: 0;
-  display: flex;
 }
 
 li {
@@ -136,3 +131,9 @@ a {
 }
 
 /* Start Animations */
+
+/*!SECTION pricing table */
+
+.price .basic-header{
+  margin:0;
+}

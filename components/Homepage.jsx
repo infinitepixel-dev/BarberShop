@@ -9,6 +9,7 @@ import "animate.css/animate.min.css";
 import { useEffect } from "react";
 // import LocationFinder from './LocationFinder';
 import { Container, Row, Col } from "react-bootstrap";
+import PricingTable from "./PricingTable";
 
 function Homepage() {
   useEffect(() => {
