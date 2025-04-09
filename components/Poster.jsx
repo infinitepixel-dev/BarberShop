@@ -1,14 +1,13 @@
-import React from "react";
-import { Row, Col } from "react-bootstrap";
-import PricingTable from './PricingTable'
-
+import React from "react"
+import { Row, Col } from "react-bootstrap"
+import PricingTable from "./PricingTable"
 
 function Poster() {
-  const poster = "./public/posterTop.png";
+  const poster = "./public/posterTop.png"
   return (
     <>
       <Row>
-        <Col className="text-center mt-5">
+        <Col className="mt-5 text-center">
           <img src={poster} alt="Shop Hours" />
         </Col>
       </Row>
@@ -16,7 +15,7 @@ function Poster() {
         <PricingTable />
       </Row>
     </>
-  );
+  )
 }
 
-export default Poster;
+export default Poster

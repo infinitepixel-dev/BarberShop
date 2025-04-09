@@ -1,0 +1,17 @@
+.barber-card {
+  width: 250px;
+  max-width: 90%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.barber-card:hover {
+  transform: translateY(-5px);
+}
+
+.barber-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 2px solid #0077ff;
+}

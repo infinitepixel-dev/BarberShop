@@ -1,45 +1,56 @@
-import React from "react";
-import Navigation from "./Navigation";
-import bgVideo from "../src/assets/bgVideo.mp4";
-import Poster from "./Poster";
+import React, { useEffect } from "react"
+import Navigation from "./Navigation"
+import bgVideo from "../src/assets/bgVideo.mp4"
+import Poster from "./Poster"
 
-import "./Homepage.css";
-import "animate.css/animate.min.css";
+import "./Homepage.css"
+import "animate.css/animate.min.css"
 
-import { useEffect } from "react";
-// import LocationFinder from './LocationFinder';
-import { Container, Row, Col } from "react-bootstrap";
-import PricingTable from "./PricingTable";
+import { Container, Row, Col } from "react-bootstrap"
+import Barbers from "./Barbers"
 
 function Homepage() {
   useEffect(() => {
-    const siteLogo = document.querySelector(".siteLogo");
+    const siteLogo = document.querySelector(".siteLogo")
     if (siteLogo) {
-      siteLogo.classList.add("animate__fadeInDown");
+      siteLogo.classList.add("animate__fadeInDown")
     }
-  }, []);
+  }, [])
 
   return (
     <Container id="homepageContainer" fluid>
       <Navigation />
+
+      {/* Video Background with Hero Text */}
       <div className="video-container">
         <video autoPlay loop muted src={bgVideo} type="video/mp4">
           Your browser does not support the video tag.
         </video>
 
-        <Row className="justify-content-center" id="logoRow">
-          <Col>
-            <div className="logo-container">
-              <img
-                src="./public/logo.png"
-                alt="Barber Shop Hair Salon Studio"
-                className="siteLogo animate__animated"
-              />
+        <Row
+          className="text-white justify-content-center align-items-center h-100"
+          id="heroContent"
+        >
+          <Col xs={12} md={8} className="text-center">
+            <h1 className="mb-3 display-2 fw-bold">
+              Fresh Cuts.
+              <br />
+              Classic Vibes.
+            </h1>
+            <h5 className="mb-4">fade, line-up, beard trim - we got you.</h5>
+            <div className="flex-wrap gap-3 d-flex justify-content-center">
+              <button className="px-4 py-2 btn btn-warning text-dark fw-semibold">
+                Book Appointment
+              </button>
+              <button className="px-4 py-2 btn btn-outline-light">
+                See Services
+              </button>
             </div>
           </Col>
         </Row>
       </div>
 
+      {/* Poster Section */}
       <Row>
         <Col>
           <Poster />
@@ -47,10 +58,12 @@ function Homepage() {
       </Row>
 
       <Row>
-        <Col>{/* <LocationFinder /> */} Location Finder Here</Col>
+        <Col>
+          <Barbers />
+        </Col>
       </Row>
     </Container>
-  );
+  )
 }
 
-export default Homepage;
+export default Homepage

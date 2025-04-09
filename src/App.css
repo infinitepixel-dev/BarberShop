@@ -1,5 +1,4 @@
 div#root {
-  background-color: #000410;
   height: auto;
 }
 
@@ -84,7 +83,14 @@ a {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background-color: #000410;
+  background-image: linear-gradient(
+    to bottom,
+    #000410,
+    #060c1d,
+    #091229,
+    #091736,
+    #0d1a42
+  );
   padding: 0;
 }
 
@@ -134,6 +140,6 @@ a {
 
 /*!SECTION pricing table */
 
-.price .basic-header{
-  margin:0;
+.price .basic-header {
+  margin: 0;
 }
