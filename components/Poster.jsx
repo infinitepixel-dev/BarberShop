@@ -1,9 +1,9 @@
-import React from "react"
-import { Row, Col } from "react-bootstrap"
-import PricingTable from "./PricingTable"
+import React from "react";
+import { Row, Col } from "react-bootstrap";
+import PricingTable from "./PricingTable";
 
 function Poster() {
-  const poster = "./public/posterTop.png"
+  const poster = "./public/posterTop.png";
   return (
     <>
       <Row>
@@ -15,7 +15,7 @@ function Poster() {
         <PricingTable />
       </Row>
     </>
-  )
+  );
 }
 
-export default Poster
+export default Poster;

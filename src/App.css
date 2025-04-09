@@ -35,16 +35,10 @@ nav {
   transition: transform 0.3s ease-in-out;
 }
 
-.navbar {
-  transition: all 0.3s ease-in-out;
-  transform: translateY(-100%);
-  opacity: 0;
-}
-
-.visible {
+/* .visible {
   transform: translateY(0);
   opacity: 1;
-}
+} */
 
 .navbar {
   transition: all 1.2s ease-in-out;
@@ -107,10 +101,6 @@ a {
 
 /*End Header Video*/
 
-#logoRow {
-  height: 20px;
-}
-
 /* Site Logo */
 .logo-container {
   display: flex;
@@ -122,10 +112,10 @@ a {
 .siteLogo {
   top: 15em;
   z-index: 1;
-  position: absolute;
+  left: 50%;
   margin: 0 auto;
   /* left: 50%; */
-  transform: translateX(-50%);
+
   animation-duration: 4s;
 }
 
@@ -134,12 +124,4 @@ a {
   font-size: 1.5em;
   color: #fff;
   line-height: 2.5;
-}
-
-/* Start Animations */
-
-/*!SECTION pricing table */
-
-.price .basic-header {
-  margin: 0;
 }

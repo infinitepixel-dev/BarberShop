@@ -1,24 +1,24 @@
-import React, { useEffect } from "react"
-import Navigation from "./Navigation"
-import bgVideo from "../src/assets/bgVideo.mp4"
-import Poster from "./Poster"
+import React, { useEffect } from "react";
+import Navigation from "./Navigation";
+import bgVideo from "../src/assets/bgVideo.mp4";
+import Poster from "./Poster";
 
-import "./Homepage.css"
-import "animate.css/animate.min.css"
+import "./Homepage.css";
+import "animate.css/animate.min.css";
 
-import { Container, Row, Col } from "react-bootstrap"
-import Barbers from "./Barbers"
+import { Container, Row, Col } from "react-bootstrap";
+import Barbers from "./Barbers";
 
 function Homepage() {
   useEffect(() => {
-    const siteLogo = document.querySelector(".siteLogo")
+    const siteLogo = document.querySelector(".siteLogo");
     if (siteLogo) {
-      siteLogo.classList.add("animate__fadeInDown")
+      siteLogo.classList.add("animate__fadeInDown");
     }
-  }, [])
+  }, []);
 
   return (
-    <Container id="homepageContainer" fluid>
+    <Container fluid>
       <Navigation />
 
       {/* Video Background with Hero Text */}
@@ -28,7 +28,7 @@ function Homepage() {
         </video>
 
         <Row
-          className="text-white justify-content-center align-items-center h-100"
+          className="align-items-center justify-content-center w-100 h-100 text-white"
           id="heroContent"
         >
           <Col xs={12} md={8} className="text-center">
@@ -38,11 +38,11 @@ function Homepage() {
               Classic Vibes.
             </h1>
             <h5 className="mb-4">fade, line-up, beard trim - we got you.</h5>
-            <div className="flex-wrap gap-3 d-flex justify-content-center">
-              <button className="px-4 py-2 btn btn-warning text-dark fw-semibold">
+            <div className="d-flex flex-wrap justify-content-center gap-3">
+              <button className="px-4 py-2 text-dark btn btn-warning fw-semibold">
                 Book Appointment
               </button>
-              <button className="px-4 py-2 btn btn-outline-light">
+              <button className="px-4 py-2 btn-outline-light btn">
                 See Services
               </button>
             </div>
@@ -63,7 +63,7 @@ function Homepage() {
         </Col>
       </Row>
     </Container>
-  )
+  );
 }
 
-export default Homepage
+export default Homepage;
