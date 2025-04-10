@@ -1,14 +1,7 @@
-#homepageContainer {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  min-height: 100vh;
-}
-
 .video-container {
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: 100svh;
   overflow: hidden;
 }
 
@@ -46,10 +39,6 @@
 
 /* Responsive styles */
 @media screen and (max-width: 800px) {
-  #homepageContainer {
-    min-height: 100vh;
-  }
-
   .video-container {
     width: 100%;
   }

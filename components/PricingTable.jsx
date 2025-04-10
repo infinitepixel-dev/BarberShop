@@ -1,91 +1,88 @@
-import React from "react"
+//PricingTable.jsx
+
+import React from "react";
+import "./PricingTable.css"; // Custom styles for gradient and hover effects
 
 function Pricing() {
+  const services = [
+    {
+      id: 1,
+      title: "The Clean Slate",
+      price: "$15",
+      features: [
+        "Quick trim (clippers only)",
+        "Line-up cleanup",
+        "No wash included",
+        "Optional beard trim",
+      ],
+    },
+    {
+      id: 2,
+      title: "The Standard",
+      price: "$25",
+      features: [
+        "Scissor & clipper cut",
+        "Hot towel neck shave",
+        "Optional wash",
+        "Style finish included",
+      ],
+    },
+    {
+      id: 3,
+      title: "The Signature",
+      price: "$40",
+      features: [
+        "Haircut (any style)",
+        "Beard trim & shape-up",
+        "Wash & condition",
+        "Hot towel & style",
+      ],
+      borderClass: "border-danger",
+    },
+    {
+      id: 4,
+      title: "The Deluxe",
+      price: "$60",
+      features: [
+        "Full Service haircut & beard",
+        "Facial treatment included",
+        "Scalp massage",
+        "Premium styling products",
+      ],
+    },
+  ];
+
   return (
-    <div className="container py-5">
-      <div className="row justify-content-center">
-        <div className="mb-4 col-lg-3 col-md-6">
-          <div className="card">
-            <div className="text-center card-body">
-              <h5 className="card-title">
-                <strong>Buzz Cut</strong>
-              </h5>
-              <h6 className="mb-2 card-subtitle text-muted">
-                <strong>$15</strong>
-              </h6>
-              <ul className="list-unstyled">
-                <li>Quick trim (clippers only)</li>
-                <li>Line-up cleanup</li>
-                <li>No wash included</li>
-                <li>Optional beard trim</li>
-              </ul>
-              <button className="btn btn-primary">Book Now</button>
+    <div className="py-5 container">
+      <h2 className="mb-5 text-center pricing-title fw-bold fs-2">
+        Our Services
+      </h2>
+      <div className="row g-4">
+        {services.map(({ id, title, price, features, borderClass = "" }) => (
+          <div className="col-6 col-md-3" key={id}>
+            <div className={`card h-100 shadow pricing-card ${borderClass}`}>
+              <div className="text-white text-center card-header pricing-card-header">
+                <h5 className="mb-1 card-title">{title}</h5>
+                <p className="card-subtitle">{price}</p>
+              </div>
+              <div className="d-flex flex-column card-body">
+                <ul className="mb-4 list-unstyled">
+                  {features.map((f, idx) => (
+                    <li key={idx} className="mb-2">
+                      • {f}
+                    </li>
+                  ))}
+                </ul>
+                <button className="mt-auto w-100 fs-5 fw-bolder btn btn-danger">
+                  Book Now
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div className="mb-4 col-lg-3 col-md-6">
-          <div className="card">
-            <div className="text-center card-body">
-              <h5 className="card-title">
-                <strong>Classic Cut</strong>
-              </h5>
-              <h6 className="mb-2 card-subtitle text-muted">
-                <strong>$25</strong>
-              </h6>
-              <ul className="list-unstyled">
-                <li>Scissor & clipper cut</li>
-                <li>Hot towel neck shave</li>
-                <li>Optional wash</li>
-                <li>Style finish included</li>
-              </ul>
-              <button className="btn btn-primary">Book Now</button>
-            </div>
-          </div>
-        </div>
-
-        <div className="mb-4 col-lg-3 col-md-6">
-          <div className="card border-danger">
-            <div className="text-center card-body">
-              <h5 className="card-title">
-                <strong>Full Service</strong>
-              </h5>
-              <h6 className="mb-2 card-subtitle text-muted">
-                <strong>$40</strong>
-              </h6>
-              <ul className="list-unstyled">
-                <li>Haircut (any style)</li>
-                <li>Beard trim & shape-up</li>
-                <li>Wash & condition</li>
-                <li>Hot towel & style</li>
-              </ul>
-              <button className="btn btn-primary">Book Now</button>
-            </div>
-          </div>
-        </div>
-
-        <div className="mb-4 col-lg-3 col-md-6">
-          <div className="card">
-            <div className="text-center card-body">
-              <h5 className="card-title">
-                <strong>Gentleman's Package</strong>
-              </h5>
-              <h6 className="mb-2 card-subtitle text-muted">
-                <strong>$60</strong>
-              </h6>
-              <ul className="list-unstyled">
-                <li>Full Service haircut & beard</li>
-                <li>Facial treatment included</li>
-                <li>Scalp massage</li>
-                <li>Premium styling products</li>
-              </ul>
-              <button className="btn btn-primary">Book Now</button>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
-  )
+  );
 }
 
-export default Pricing
+export default Pricing;
