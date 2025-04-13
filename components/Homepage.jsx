@@ -7,6 +7,8 @@ import "animate.css/animate.min.css"
 
 import { Container, Row, Col } from "react-bootstrap"
 import Barbers from "./Barbers"
+import AboutUs from "./AboutUs"
+import Footer from "./Footer"
 
 function Homepage() {
   useEffect(() => {
@@ -59,6 +61,16 @@ function Homepage() {
       <Row>
         <Col>
           <Barbers />
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <AboutUs />
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <Footer />
         </Col>
       </Row>
     </Container>
