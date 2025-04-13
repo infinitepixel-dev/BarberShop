@@ -1,7 +1,7 @@
 //PricingTable.jsx
 
-import React from "react";
-import "./PricingTable.css"; // Custom styles for gradient and hover effects
+import React from "react"
+import "./PricingTable.css" // Custom styles for gradient and hover effects
 
 function Pricing() {
   const services = [
@@ -50,16 +50,32 @@ function Pricing() {
         "Premium styling products",
       ],
     },
-  ];
+  ]
 
   return (
     <div className="py-5 container">
       <h2 className="mb-5 text-center pricing-title fw-bold fs-2">
-        Our Services
+        <img
+          src="/images/scissors-icon.png"
+          alt="background"
+          style={{
+            filter: "invert(1)",
+            width: "50px",
+          }}
+        />
+        &nbsp;&nbsp; Our Services &nbsp;&nbsp;
+        <img
+          src="/images/comb-icon.png"
+          alt="background"
+          style={{
+            filter: "invert(1)",
+            width: "50px",
+          }}
+        />
       </h2>
       <div className="row g-4">
         {services.map(({ id, title, price, features, borderClass = "" }) => (
-          <div className="col-6 col-md-3" key={id}>
+          <div className="col-6 col-12 col-md-3" key={id}>
             <div className={`card h-100 shadow pricing-card ${borderClass}`}>
               <div className="text-white text-center card-header pricing-card-header">
                 <h5 className="mb-1 card-title">{title}</h5>
@@ -82,7 +98,7 @@ function Pricing() {
         ))}
       </div>
     </div>
-  );
+  )
 }
 
-export default Pricing;
+export default Pricing

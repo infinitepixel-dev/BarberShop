@@ -9,13 +9,18 @@
   border-radius: 0.75rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.d-flex.flex-column.card-body {
+  border-radius: 0.75rem;
+}
+
 .pricing-card:hover {
   transform: scale(1.02);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
 .pricing-card-header {
-  background: linear-gradient(135deg, #0d6efd, #6610f2);
+  background: linear-gradient(135deg, #fd0d0d, #750606);
   padding: 1rem;
   border-top-left-radius: 0.75rem;
   border-top-right-radius: 0.75rem;
