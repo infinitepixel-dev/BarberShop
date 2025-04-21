@@ -57,7 +57,7 @@ function Pricing() {
       <h2 className="mb-5 text-center pricing-title fw-bold fs-2">
         <img
           // src should also import the meta base url
-          src={`${import.meta.env.BASE_URL}/images/comb-icon.png
+          src={`${import.meta.env.BASE_URL}/images/scissors-icon.png
         `}
           alt="background"
           style={{
