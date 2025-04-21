@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
-    <footer className=" text-white py-4 mt-auto">
-      <div className="container text-center">
+    <footer className="mt-auto py-4 text-white">
+      <div className="text-center container">
         <p className="mb-1">&copy; {new Date().getFullYear()} Fresh Cuts</p>
         <ul className="list-inline">
           <li className="list-inline-item">
@@ -22,7 +22,7 @@ const Footer = () => {
         </ul>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

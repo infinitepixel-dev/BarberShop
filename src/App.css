@@ -12,10 +12,21 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100svw;
   z-index: 1000;
   background-color: #751717;
   background-image: url("/black-twill.png");
+}
+
+footer {
+  background-color: #751717;
+  background-image: url("/black-twill.png");
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100svw;
 }
 
 .navigation {
@@ -73,14 +84,7 @@ a {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background-image: linear-gradient(
-    to bottom,
-    #e0e0e0,
-    #7d7d7d,
-    #4b4b4b,
-    #121212,
-    #000000
-  );
+  background-color: #868686; /* Our Services and About Us Background Colors are used here */
   padding: 0;
   min-height: 100vh;
 }
