@@ -1,7 +1,7 @@
 //PricingTable.jsx
 
-import React from "react"
-import "./PricingTable.css" // Custom styles for gradient and hover effects
+import React from "react";
+import "./PricingTable.css"; // Custom styles for gradient and hover effects
 
 function Pricing() {
   const services = [
@@ -50,13 +50,15 @@ function Pricing() {
         "Premium styling products",
       ],
     },
-  ]
+  ];
 
   return (
     <div className="py-5 container">
       <h2 className="mb-5 text-center pricing-title fw-bold fs-2">
         <img
-          src="/images/scissors-icon.png"
+          // src should also import the meta base url
+          src={`${import.meta.env.BASE_URL}/images/comb-icon.png
+        `}
           alt="background"
           style={{
             filter: "invert(1)",
@@ -65,7 +67,7 @@ function Pricing() {
         />
         &nbsp;&nbsp; Our Services &nbsp;&nbsp;
         <img
-          src="/images/comb-icon.png"
+          src={`${import.meta.env.BASE_URL}/images/comb-icon.png`}
           alt="background"
           style={{
             filter: "invert(1)",
@@ -98,7 +100,7 @@ function Pricing() {
         ))}
       </div>
     </div>
-  )
+  );
 }
 
-export default Pricing
+export default Pricing;
